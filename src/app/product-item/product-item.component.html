@@ -1,0 +1,16 @@
+<div class="product px-2 py-4">
+    <a [routerLink]="['/productDetails',product.id]">
+    <img [src]="product.imageCover" class="w-100" alt="">
+    <p class="text-main">{{product.category.name}}</p>
+    <h2 class="h6">{{product.title.split(" ").splice(0,2).join(" ")}}</h2>
+    
+    <div class="d-flex flex-column justify-content-between">
+        <span>{{product.price}} EGP</span>
+        <div>
+         rate:   <i *ngFor="let star of product.ratingsAverage " class="fa fa-star rating-color"></i>
+            <!-- <span>{{product.ratingsAverage}}</span> -->
+        </div>
+    </div>
+</a>
+    <button (click)="addProduct(product.id)" class="btn bg-main w-100 text-white py-1">+ Add</button>
+</div>

@@ -1,0 +1,22 @@
+.image-main{
+    position: relative;
+    overflow: hidden;
+}
+.image-main::before{
+
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: -110%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: skewX(10deg);
+        transition: all 0.8s;
+        top: 0;
+        z-index: 33333333;
+}
+.image-main:hover::before
+{
+left: 110%;
+
+}
